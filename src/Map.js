@@ -3,8 +3,8 @@ import Button from './Button.js';
 import Cards from './Cards.js';
 
 class Map extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {}
   }
 
@@ -15,7 +15,7 @@ class Map extends Component {
           <img src="" alt="World Map" />
         </picture>
         <Button />
-        <Cards />
+        <Cards searchInput={this.props.searchInput} />
       </main>
     )
   }

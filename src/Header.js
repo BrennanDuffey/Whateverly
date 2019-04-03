@@ -24,8 +24,10 @@ class Header extends Component {
     return(
       <header>
         <h1>Name</h1>
-        <input type="search" placeholder="  Search Animal..." onChange={this.handleChange} />  
-        <button onClick={this.handleClick}>Submit</button>  
+        <form>
+          <input type="search" placeholder=" Search Animal..." onChange={this.handleChange} />  
+          <button onClick={this.handleClick}>Submit</button> 
+        </form> 
       </header>
     
     )
