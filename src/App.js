@@ -5,10 +5,18 @@ import api from './api.js';
 import './App.css';
 
 class App extends Component {
+  constructor() {
+    super();
+  }
+  
+  generateContent = (inputValue) => {
+    console.log(inputValue)
+  }
+
   render() {
     return (
       <div className="App">
-       <Header /> 
+       <Header generateContent={this.generateContent} /> 
        <Map /> 
       </div>
     );
