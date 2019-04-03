@@ -1,25 +1,30 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import Map from './Map.js';
+import Header from './Header.js';
+import api from './api.js';
 import './App.css';
 
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      searchInput: ' '
+    }
+  }
+  
+  generateContent = (inputValue) => {
+    // console.log(inputValue)
+    this.setState({
+      searchInput: inputValue
+    })
+
+  }
+
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+       <Header generateContent={this.generateContent} /> 
+       <Map searchInput={this.state.searchInput} /> 
       </div>
     );
   }
