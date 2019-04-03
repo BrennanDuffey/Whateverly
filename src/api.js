@@ -322,7 +322,7 @@ const endangeredSpecies = [
   "population": "1,816",
   "threats": ["ByCatch", "Hunting", "Polution"],
   "image": "https://c402277.ssl.cf1.rackcdn.com/photos/14861/images/hero_full/Indus_River_Dolphin.jpg?1513270520"
-  }
+  },
   { 
   "name": "Black Spider Monkey",
   "genus": "Ateles Paniscus",
