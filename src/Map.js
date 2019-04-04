@@ -12,7 +12,7 @@ class Map extends Component {
     return(
       <main>
         <picture>
-          <img src="" alt="World Map" />
+          <img src="http://www.johomaps.com/world/worldblank_bw.jpg" alt="World Map" />
         </picture>
         <Button />
         <Cards searchInput={this.props.searchInput} />
