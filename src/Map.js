@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Button from './Button.js';
 import Cards from './Cards.js';
+import worldMap from './worldmap.jpg'
+
 
 class Map extends Component {
   constructor(props) {
@@ -12,7 +14,7 @@ class Map extends Component {
     return(
       <main>
         <picture>
-          <img src="http://www.johomaps.com/world/worldblank_bw.jpg" alt="World Map" />
+          <img src={worldMap} alt="World Map" />
         </picture>
         <Button />
         <Cards searchInput={this.props.searchInput} />
