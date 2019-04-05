@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Map from './Map.js';
+import Globe from './Globe.js';
 import Header from './Header.js';
 import './App.css';
 
@@ -7,8 +7,8 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      endangeredSpecies: null,
-      countries: null,
+      endangeredSpecies: [],
+      countries: [],
       searchInput: ''
     }
   }
@@ -16,17 +16,13 @@ class App extends Component {
   componentDidMount = () => {
     fetch('https://fe-apps.herokuapp.com/api/v1/whateverly/1901/KaylaLawson/endangeredSpecies')
     .then(response => response.json())
-    .then(endangeredSpecies => this.setState({endangeredSpecies}, () => {
-      console.log('Hi Brennen:', this.state)
-    }))
+    .then(data => this.setState({endangeredSpecies: data.endangeredSpecies }))
     .catch(err => console.log(err))
 
     fetch('https://fe-apps.herokuapp.com/api/v1/whateverly/1901/KaylaLawson/countries')
     .then(response => response.json())
-    .then(countries => this.setState({countries}, () => {
-      console.log('Hi Brennen:', this.state)
-    }))
-    .catch(err => console.log('Hi Brennen:', err))
+    .then(data => this.setState({countries: data.countries}))
+    .catch(err => console.log( err))
   }
   
   generateContent = (inputValue) => {
@@ -38,10 +34,11 @@ class App extends Component {
   }
 
   render() {
+    console.log(this.state.endangeredSpecies);
     return (
       <div className="App">
        <Header generateContent={this.generateContent} /> 
-       <Map searchInput={this.state.searchInput} 
+       <Globe searchInput={this.state.searchInput} 
             endangeredSpecies={this.state.endangeredSpecies} 
             countries={this.state.countries} /> 
       </div>

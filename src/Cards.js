@@ -1,9 +1,9 @@
 import React from 'react';
 import './Cards.css';
-const Cards = () => {
+const Cards = (props) => {
   return (
     <section className="cards"> 
-      <img src="https://c402277.ssl.cf1.rackcdn.com/photos/1341/images/hero_full/snow-leopard-test.jpg?1345592123" alt="prop-stuff" />
+      <img src={props.image} />
       <article>
         {/* favorite an animal */}
         <h2>Animal Name</h2>
