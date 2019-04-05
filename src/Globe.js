@@ -14,15 +14,7 @@ class Globe extends Component {
     console.log(endangeredSpecies)
     // return endangeredSpecies.map(val => <Cards {...val}/>)
     return this.props.endangeredSpecies.map(species => {
-      return <Cards 
-        name={species.name}
-        genus={species.genus}
-        endangeredStatus={species.endangeredStatus}
-        locations={species.locations}
-        population={species.population}
-        threats={species.threats}
-        image={species.image} 
-        key={species.name} />
+      return <Cards {...species} key={species.name}/>
       })
       // .filter(card => card.name === this.props.searchInput)
   }
