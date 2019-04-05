@@ -6,13 +6,13 @@ const Cards = (props) => {
       <img src={props.image} />
       <article>
         {/* favorite an animal */}
-        <h2>Animal Name</h2>
-        <p>Extinction Level: </p>
-        <p>Population: </p>
-        <p>Genus: </p>
-        <p>Locations: </p>
-        <p>Threats: </p>
-        <p>Get Involved: </p>
+        <h2>{props.name}</h2>
+        <p>Extinction Level: {props.endangeredStatus}</p>
+        <p>Population: {props.population}</p>
+        <p>Genus: {props.genus}</p>
+        <p>Locations: {props.locations.join(', ')}</p>
+        <p>Threats: {props.threats.join(', ')}</p>
+        <p>Get Involved:</p>
       </article>
     </section>
   )
