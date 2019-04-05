@@ -1,0 +1,21 @@
+header {
+  display: flex;
+  justify-content: space-around;
+  padding: 0px 190px;
+}
+
+form {
+  display: flex;
+  padding-top: 28px;
+}
+
+input {
+  -webkit-appearance: none;
+  font-size: 1rem;
+  height: 28px;
+  width: 200px;
+}
+
+button {
+  height: 27px;
+}
