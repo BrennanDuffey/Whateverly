@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Button from './Button.js';
-import Cards from './Cards.js';
-import worldMap from './worldmap.jpg'
+import Card from './Card.js';
+// import worldMap from './worldmap.jpg'
 
 
 class Globe extends Component {
@@ -14,7 +14,7 @@ class Globe extends Component {
     console.log(endangeredSpecies)
     // return endangeredSpecies.map(val => <Cards {...val}/>)
     return this.props.endangeredSpecies.map(species => {
-      return <Cards {...species} key={species.name}/>
+      return <Card {...species} key={species.name}/>
       })
       // .filter(card => card.name === this.props.searchInput)
   }
