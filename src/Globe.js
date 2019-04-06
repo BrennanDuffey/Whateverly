@@ -9,15 +9,19 @@ class Globe extends Component {
     super(props);
     this.state = {}
   }
+  
   renderSpecies = () => {
-    const { endangeredSpecies } = this.props
-    console.log(endangeredSpecies)
-    // return endangeredSpecies.map(val => <Cards {...val}/>)
-    return this.props.endangeredSpecies.map(species => {
+    return this.props.endangeredSpecies
+    .filter(species => species.name === this.props.searchInput)
+    .map(species => {
       return <Card {...species} key={species.name}/>
       })
-      // .filter(card => card.name === this.props.searchInput)
   }
+
+  renderCountries = () => {
+    
+  }
+
 
   render() {
     return(
@@ -25,7 +29,6 @@ class Globe extends Component {
         {
           this.renderSpecies()
       }
-      {/* console.log('card stuff: ', species.name); */}
       </main>
     )
   }
