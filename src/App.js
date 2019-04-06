@@ -30,7 +30,6 @@ class App extends Component {
     this.setState({
       searchInput: inputValue
     })
-
   }
 
   render() {

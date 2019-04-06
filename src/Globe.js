@@ -38,9 +38,11 @@ class Globe extends Component {
     return(
       <main>
         {
-          this.renderSpecies(),
-          this.renderCountry()
+          this.renderSpecies()
           // this.renderCountrySpecies()
+        }
+        {
+          this.renderCountry()
         }
         {
           this.renderCountrySpecies()
