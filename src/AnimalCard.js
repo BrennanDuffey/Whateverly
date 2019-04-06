@@ -1,6 +1,7 @@
 import React from 'react';
-import './Cards.css';
-const Cards = (props) => {
+import './AnimalCard.css';
+
+const AnimalCard = (props) => {
   return (
     <section className="cards"> 
       <img src={props.image} />
@@ -18,4 +19,4 @@ const Cards = (props) => {
   )
 }
 
-export default Cards; 
+export default AnimalCard; 

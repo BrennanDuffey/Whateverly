@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Button from './Button.js';
-import Card from './Card.js';
+import AnimalCard from './AnimalCard.js';
+import CountryCard from './CountryCard.js'
 // import worldMap from './worldmap.jpg'
 
 
@@ -14,12 +15,18 @@ class Globe extends Component {
     return this.props.endangeredSpecies
     .filter(species => species.name === this.props.searchInput)
     .map(species => {
-      return <Card {...species} key={species.name}/>
+      return <AnimalCard {...species} key={species.name}/>
       })
   }
 
-  renderCountries = () => {
-    
+  renderCountry = () => {
+    return this.props.countries.filter(country => country.name === this.props.searchInput).map(country => {
+      return <CountryCard {...country}  key={country.name}/>
+    })
+  }
+
+  renderCountrySpecies = () => {
+
   }
 
 
@@ -27,8 +34,9 @@ class Globe extends Component {
     return(
       <main>
         {
-          this.renderSpecies()
-      }
+          this.renderSpecies(),
+          this.renderCountry()
+        }
       </main>
     )
   }
