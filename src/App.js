@@ -34,7 +34,7 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.state.endangeredSpecies);
+    // console.log(this.state.endangeredSpecies);
     return (
       <div className="App">
        <Header generateContent={this.generateContent} /> 
