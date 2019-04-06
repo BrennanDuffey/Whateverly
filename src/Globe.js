@@ -16,7 +16,7 @@ class Globe extends Component {
     .filter(species => species.name === this.props.searchInput)
     .map(species => {
       return <AnimalCard {...species} key={species.name}/>
-      })
+    })
   }
 
   renderCountry = () => {
@@ -26,7 +26,11 @@ class Globe extends Component {
   }
 
   renderCountrySpecies = () => {
-
+    return this.props.endangeredSpecies
+    .filter(species => species.locations.includes(this.props.searchInput))
+    .map(species => {
+      return <AnimalCard {...species} key={species.name}/>
+    })
   }
 
 
@@ -36,6 +40,10 @@ class Globe extends Component {
         {
           this.renderSpecies(),
           this.renderCountry()
+          // this.renderCountrySpecies()
+        }
+        {
+          this.renderCountrySpecies()
         }
       </main>
     )
