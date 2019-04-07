@@ -1,14 +1,34 @@
+Colors: 
+/*
+#102731;
+#364C4A;
+#F2EFAE;
+#EAE191;
+#323F5E;
+
+Dark Grey: #4F4F4F;
+Blue saphire: #1A657C;
+Portland Orange: #FF6232;
+Cadet Grey: #8FA7AD; 
+White: #FCFDFF; 
+*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url(https://www.printawallpaper.com/upload/designs/gold_world_map_detail.jpg);
 }
 
-code {
+/* code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
-}
+} */
