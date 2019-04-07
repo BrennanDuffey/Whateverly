@@ -7,7 +7,8 @@ const CountryCard = (props) => {
       <h2>{props.name}</h2>
       <p>Population: {props.population}</p>
       <p>Threats: {props.topThreats.join(', ')} </p>
-      <p>Conservation Groups: {props.conservationGroups.join(', ')} </p>
+      <p>Conservation Groups: {props.conservationGroups.map(group => 
+        group.name).join(', ')} </p>
     </article>
   )
 }
