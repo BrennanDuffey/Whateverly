@@ -6,7 +6,7 @@ const AnimalCard = (props) => {
     <section className="cards"> 
       <img src={props.image} />
       <article>
-        {/* favorite an animal */}
+        <button onClick={() => props.addFav(props.name)}>Add to Favorites</button>
         <h2>{props.name}</h2>
         <p className="animal-info-titles">Extinction Level: <span className="animal-info-red">{props.endangeredStatus}</span></p>
         <p className="animal-info-titles">Population: <span className="animal-info-red">{props.population}</span></p>

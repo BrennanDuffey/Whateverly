@@ -15,7 +15,7 @@ class Globe extends Component {
     return this.props.endangeredSpecies
     .filter(species => species.name.toLowerCase() === this.props.searchInput.toLowerCase())
     .map(species => {
-      return <AnimalCard {...species} key={species.name}/>
+      return <AnimalCard {...species} key={species.name} addFav={this.props.addFav}/>
     })
   }
 
@@ -30,7 +30,7 @@ class Globe extends Component {
     .filter(species => species.locations.map(location => location.toLowerCase())
       .includes(this.props.searchInput.toLowerCase()))
     .map(species => {
-      return <AnimalCard {...species} key={species.name}/>
+      return <AnimalCard {...species} key={species.name} addFav={this.props.addFav}/>
     })
   }
 
