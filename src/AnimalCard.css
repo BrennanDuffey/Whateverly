@@ -1,17 +1,44 @@
 .cards {
- border: dotted 2px grey;
+ object-fit: contain;
+ background-color: #102731; 
+ border-radius: 5px;
+ box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
  justify-content: center;
  margin: auto;
- width: 50%;
+ width: 40%;
 }
-
+article {
+  padding: 5px;
+}
 img {
   width: 100%;
+}
+h2 {
+  margin: 2px;
+  color: #FCFDFF;
+  font-size: 3.5em;
 }
 
 p {
   text-align: left;
-  font-weight: bold;
   margin: 10px;
+}
+
+.animal-info-red {
+  color: #FF6232;
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+.animal-info {
+  color: #1A657C;
+  font-weight: 400;
+  font-size: 1.2rem;
+
+}
+.animal-info-titles {
+  color: #8FA7AD;
+  font-weight: bold;
+  font-size: 1.5rem;
+
 }
 

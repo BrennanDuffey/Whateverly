@@ -8,12 +8,12 @@ const AnimalCard = (props) => {
       <article>
         {/* favorite an animal */}
         <h2>{props.name}</h2>
-        <p>Extinction Level: {props.endangeredStatus}</p>
-        <p>Population: {props.population}</p>
-        <p>Genus: {props.genus}</p>
-        <p>Locations: {props.locations.join(', ')}</p>
-        <p>Threats: {props.threats.join(', ')}</p>
-        <p>Get Involved:</p>
+        <p className="animal-info-titles">Extinction Level: <span className="animal-info-red">{props.endangeredStatus}</span></p>
+        <p className="animal-info-titles">Population: <span className="animal-info-red">{props.population}</span></p>
+        <p className="animal-info-titles">Genus: <span className="animal-info">{props.genus}</span></p>
+        <p className="animal-info-titles">Locations: <span className="animal-info">{props.locations.join(', ')}</span></p>
+        <p className="animal-info-titles">Threats: <span className="animal-info">{props.threats.join(', ')}</span></p>
+        <p className="animal-info-titles">Get Involved:</p>
       </article>
     </section>
   )
