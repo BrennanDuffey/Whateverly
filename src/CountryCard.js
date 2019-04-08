@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from './Link.js'
 import './CountryCard.css';
 
 const CountryCard = (props) => {
@@ -7,8 +8,9 @@ const CountryCard = (props) => {
       <h2>{props.name}</h2>
       <p>Population: {props.population}</p>
       <p>Threats: {props.topThreats.join(', ')} </p>
-      <p>Conservation Groups: {props.conservationGroups.map(group => 
-        group.name).join(', ')} </p>
+      <p>Conservation Groups: {props.conservationGroups.map(group => {
+        return <Link link={group.link} name={group.name} />
+      })}</p>
     </article>
   )
 }
