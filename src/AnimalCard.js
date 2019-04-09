@@ -10,8 +10,10 @@ const AnimalCard = (props) => {
           props.addFav(props.name)
           if(e.target.innerText === 'Add to Favorites'){
             e.target.innerText = 'Favorited!';
+            e.target.className += ' favorited'
           } else{
-            e.target.innerText = 'Add to Favorites'
+            e.target.innerText = 'Add to Favorites';
+            e.target.className -= ' favorited'
           }
         }
          } id='favbtn'>Add to Favorites</button>

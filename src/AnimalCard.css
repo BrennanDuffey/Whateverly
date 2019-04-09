@@ -12,6 +12,19 @@ article {
 img {
   width: 100%;
 }
+
+button {
+  font-family: Apple Chancery;
+  font-size: 1rem;
+  min-width: 140px;
+  width: 35%;
+}
+
+.favorited {
+  background:rgb(204, 190, 68);
+  font-weight: bolder;
+}
+
 h2 {
   margin: 2px;
   color: #FCFDFF;
