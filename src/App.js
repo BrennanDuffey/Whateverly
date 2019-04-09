@@ -24,7 +24,8 @@ class App extends Component {
       .then(response => response.json())
       .then(data => this.setState({countries: data.countries}))
       .catch(err => console.log(err))
-
+    
+    this.getLocalStorage()
     //add method to App.js that will grab local storage and setState favAnimals to what has been grabbed
   }
 
@@ -38,8 +39,15 @@ class App extends Component {
     this.setState({
       favAnimals: favs
     }, () => {
-      localStorage.setItem('favs', this.state.favAnimals)
+      localStorage.setItem('favs', JSON.stringify(this.state.favAnimals))
     })
+  }
+
+  getLocalStorage = () => {
+   const animalFavorites = JSON.parse(localStorage.getItem('favs'));
+   if(animalFavorites.length > 0){
+     this.setState({ favAnimals: animalFavorites})
+   }
   }
   
   generateContent = (inputValue) => {
