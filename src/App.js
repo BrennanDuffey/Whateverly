@@ -26,7 +26,6 @@ class App extends Component {
       .catch(err => console.log(err))
     
     this.getLocalStorage()
-    //add method to App.js that will grab local storage and setState favAnimals to what has been grabbed
   }
 
   addFav = (animal) => {

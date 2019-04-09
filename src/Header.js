@@ -12,7 +12,7 @@ class Header extends Component {
   handleChange = (e) => {
     this.setState({
       // const { value } = e.target
-      inputValue: e.target.value
+      inputValue: e.target.value.trim()
     })
   }
 
