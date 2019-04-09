@@ -5,29 +5,30 @@ class Header extends Component {
   constructor() {
     super();
     this.state = {
-      inputValue:  ' '
+      showFavorites: false
     }
   }
 
   handleChange = (e) => {
-    this.setState({
-      // const { value } = e.target
-      inputValue: e.target.value.trim()
-    })
+    e.preventDefault();
+    this.props.generateContent(e.target.value.trim());
   }
 
   handleClick = (e) => {
     e.preventDefault();
-    this.props.generateContent(this.state.inputValue);
+    //method from app takes showfavorite as argument
+    this.setState({showFavorites: !this.state.showFavorites})
   }
 
   render() {
+    let showFavBtn = 'Show Favorites';
+    // if (this.state.showFavorites)
     return(
       <header>
         <h1>Kayla's Ark</h1>
         <form>
           <input type="search" placeholder=" Search Animal..." onChange={this.handleChange} />  
-          <button onClick={this.handleClick}>Submit</button> 
+          <button>{showFavBtn}</button>
         </form> 
       </header>
     

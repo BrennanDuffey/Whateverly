@@ -26,6 +26,7 @@ class App extends Component {
       .catch(err => console.log(err))
     
     this.getLocalStorage()
+
   }
 
   addFav = (animal) => {
@@ -43,9 +44,9 @@ class App extends Component {
   }
 
   getLocalStorage = () => {
-   const animalFavorites = JSON.parse(localStorage.getItem('favs'));
-   if(animalFavorites.length > 0){
-     this.setState({ favAnimals: animalFavorites})
+  //  const animalFavorites = JSON.parse(localStorage.getItem('favs'));
+   if(localStorage.getItem('favs')) {
+     this.setState({ favAnimals: JSON.parse(localStorage.getItem('favs') ) } )
    }
   }
   
@@ -63,7 +64,8 @@ class App extends Component {
         <Globe searchInput={this.state.searchInput} 
             endangeredSpecies={this.state.endangeredSpecies} 
             countries={this.state.countries} 
-            addFav = {this.addFav}
+            addFav={this.addFav}
+            favAnimals={this.state.favAnimals}
         /> 
       </div>
     );

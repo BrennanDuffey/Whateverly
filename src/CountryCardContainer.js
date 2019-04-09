@@ -12,7 +12,7 @@ const CountryCardContainer = (props) => {
       .filter(species => species.locations.map(location => location.toLowerCase())
         .includes(props.searchInput.toLowerCase()))
         .map(species => {
-        return <AnimalCard {...species} key={species.name} addFav={props.addFav}/>
+        return <AnimalCard {...species} key={species.name} addFav={props.addFav} favAnimals={props.favAnimals} />
       })}
     </section>
   )
