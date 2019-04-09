@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Button from './Button.js';
 import AnimalCard from './AnimalCard.js';
 import CountryCard from './CountryCard.js'
 // import worldMap from './worldmap.jpg'
