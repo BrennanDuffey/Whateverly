@@ -23,8 +23,6 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Roboto Condensed', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   background-image: url(https://www.printawallpaper.com/upload/designs/gold_world_map_detail.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;

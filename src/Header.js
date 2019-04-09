@@ -24,7 +24,7 @@ class Header extends Component {
   render() {
     return(
       <header>
-        <h1>Name</h1>
+        <h1>Kayla's Ark</h1>
         <form>
           <input type="search" placeholder=" Search Animal..." onChange={this.handleChange} />  
           <button onClick={this.handleClick}>Submit</button> 

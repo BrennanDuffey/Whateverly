@@ -13,23 +13,24 @@ class Globe extends Component {
   
   renderSpecies = () => {
     return this.props.endangeredSpecies
-    .filter(species => species.name === this.props.searchInput)
+    .filter(species => species.name.toLowerCase() === this.props.searchInput.toLowerCase())
     .map(species => {
-      return <AnimalCard {...species} key={species.name}/>
+      return <AnimalCard {...species} key={species.name} addFav={this.props.addFav}/>
     })
   }
 
   renderCountry = () => {
-    return this.props.countries.filter(country => country.name === this.props.searchInput).map(country => {
+    return this.props.countries.filter(country => country.name.toLowerCase() === this.props.searchInput.toLowerCase()).map(country => {
       return <CountryCard {...country}  key={country.name}/>
     })
   }
 
   renderCountrySpecies = () => {
     return this.props.endangeredSpecies
-    .filter(species => species.locations.includes(this.props.searchInput))
+    .filter(species => species.locations.map(location => location.toLowerCase())
+      .includes(this.props.searchInput.toLowerCase()))
     .map(species => {
-      return <AnimalCard {...species} key={species.name}/>
+      return <AnimalCard {...species} key={species.name} addFav={this.props.addFav}/>
     })
   }
 
@@ -39,7 +40,6 @@ class Globe extends Component {
       <main>
         {
           this.renderSpecies()
-          // this.renderCountrySpecies()
         }
         {
           this.renderCountry()
