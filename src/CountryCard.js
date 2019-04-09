@@ -4,13 +4,13 @@ import './CountryCard.css';
 
 const CountryCard = (props) => {
   return (
-    <article>
+    <article className="cc-card">
       <h2>{props.name}</h2>
-      <p>Population: {props.population}</p>
-      <p>Threats: {props.topThreats.join(', ')} </p>
-      <p>Conservation Groups: {props.conservationGroups.map(group => {
+      <p className="cc">Population: <span className="cc-pop">{props.population}</span></p>
+      <p className="cc">Threats: <span className="cc-info">{props.topThreats.join(', ')}</span></p>
+      <p className="cc">Conservation Groups: <span className="cc-info">{props.conservationGroups.map(group => {
         return <Link link={group.link} name={group.name} />
-      })}</p>
+      })}</span></p>
     </article>
   )
 }
