@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import AnimalCard from './AnimalCard.js';
-import CountryCard from './CountryCard.js'
-// import worldMap from './worldmap.jpg'
-
+import CountryCardContainer from './CountryCardContainer.js';
+import AnimalCardContainer from './AnimalCardContainer.js';
+import FavoriteCardContainer from './FavoriteCardContainer.js';
 
 class Globe extends Component {
   constructor(props) {
@@ -10,42 +9,50 @@ class Globe extends Component {
     this.state = {}
   }
   
-  renderSpecies = () => {
-    return this.props.endangeredSpecies
-    .filter(species => species.name.toLowerCase() === this.props.searchInput.toLowerCase())
-    .map(species => {
-      return <AnimalCard {...species} key={species.name} addFav={this.props.addFav}/>
-    })
-  }
+  // renderSpecies = () => {
+  //   return this.props.endangeredSpecies
+  //   .filter(species => species.name.toLowerCase() === this.props.searchInput.toLowerCase())
+  //   .map(species => {
+  //     return <AnimalCard {...species} key={species.name} addFav={this.props.addFav}/>
+  //   })
+  // }
 
-  renderCountry = () => {
-    return this.props.countries.filter(country => country.name.toLowerCase() === this.props.searchInput.toLowerCase()).map(country => {
-      return <CountryCard {...country}  key={country.name}/>
-    })
-  }
+  // renderCountry = () => {
+  //   return this.props.countries.filter(country => country.name.toLowerCase() === this.props.searchInput.toLowerCase()).map(country => {
+  //     return <CountryCard {...country}  key={country.name}/>
+  //   })
+  // }
 
-  renderCountrySpecies = () => {
-    return this.props.endangeredSpecies
-    .filter(species => species.locations.map(location => location.toLowerCase())
-      .includes(this.props.searchInput.toLowerCase()))
-    .map(species => {
-      return <AnimalCard {...species} key={species.name} addFav={this.props.addFav}/>
-    })
-  }
+  // renderCountrySpecies = () => {
+  //   return this.props.endangeredSpecies
+  //   .filter(species => species.locations.map(location => location.toLowerCase())
+  //     .includes(this.props.searchInput.toLowerCase()))
+  //   .map(species => {
+  //     return <AnimalCard {...species} key={species.name} addFav={this.props.addFav}/>
+  //   })
+  // }
 
 
   render() {
+    // state.displayFavs is true render favs else render all
+    // toRender = those ^^^^ results
     return(
       <main>
-        {
-          this.renderSpecies()
-        }
-        {
-          this.renderCountry()
-        }
-        {
-          this.renderCountrySpecies()
-        }
+        <CountryCardContainer endangeredSpecies={this.props.endangeredSpecies} 
+          countries={this.props.countries}
+          addFav={this.props.addFav} 
+          searchInput={this.props.searchInput} 
+          favAnimals={this.props.favAnimals}
+        />
+        <AnimalCardContainer endangeredSpecies={this.props.endangeredSpecies} 
+          addFav={this.props.addFav} 
+          searchInput={this.props.searchInput} 
+          favAnimals={this.props.favAnimals}
+        />
+        <FavoriteCardContainer endangeredSpecies={this.props.endangeredSpecies} 
+          addFav={this.props.addFav} 
+          favAnimals={this.props.favAnimals}
+        />
       </main>
     )
   }
@@ -55,7 +62,3 @@ class Globe extends Component {
 
 
 export default Globe;
-{/* <picture>
-  {/* <img src={worldMap} alt="World Map" /> 
-</picture>
-<Button /> */}
