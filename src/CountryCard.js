@@ -9,7 +9,7 @@ const CountryCard = (props) => {
       <p className="cc">Homo-Sapian Population: <span className="cc-pop">{props.population}</span></p>
       <p className="cc">Threats: <span className="cc-info">{props.topThreats.join(', ')}</span></p>
       <p className="cc">Conservation Groups: <span className="cc-info">{props.conservationGroups.map(group => {
-        return <Link link={group.link} name={group.name} />
+        return <Link link={group.link} name={group.name} key={group.name}/>
       })}</span></p>
     </article>
   )
