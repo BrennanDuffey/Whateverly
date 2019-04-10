@@ -9,52 +9,36 @@ class Globe extends Component {
     this.state = {}
   }
   
-  // renderSpecies = () => {
-  //   return this.props.endangeredSpecies
-  //   .filter(species => species.name.toLowerCase() === this.props.searchInput.toLowerCase())
-  //   .map(species => {
-  //     return <AnimalCard {...species} key={species.name} addFav={this.props.addFav}/>
-  //   })
-  // }
-
-  // renderCountry = () => {
-  //   return this.props.countries.filter(country => country.name.toLowerCase() === this.props.searchInput.toLowerCase()).map(country => {
-  //     return <CountryCard {...country}  key={country.name}/>
-  //   })
-  // }
-
-  // renderCountrySpecies = () => {
-  //   return this.props.endangeredSpecies
-  //   .filter(species => species.locations.map(location => location.toLowerCase())
-  //     .includes(this.props.searchInput.toLowerCase()))
-  //   .map(species => {
-  //     return <AnimalCard {...species} key={species.name} addFav={this.props.addFav}/>
-  //   })
-  // }
-
-
   render() {
     // state.displayFavs is true render favs else render all
     // toRender = those ^^^^ results
-    return(
-      <main>
-        <CountryCardContainer endangeredSpecies={this.props.endangeredSpecies} 
-          countries={this.props.countries}
-          addFav={this.props.addFav} 
-          searchInput={this.props.searchInput} 
-          favAnimals={this.props.favAnimals}
-        />
-        <AnimalCardContainer endangeredSpecies={this.props.endangeredSpecies} 
-          addFav={this.props.addFav} 
-          searchInput={this.props.searchInput} 
-          favAnimals={this.props.favAnimals}
-        />
-        <FavoriteCardContainer endangeredSpecies={this.props.endangeredSpecies} 
+    if(this.props.isFavorite) {
+      return (
+        <main> 
+          <FavoriteCardContainer endangeredSpecies={this.props.endangeredSpecies} 
           addFav={this.props.addFav} 
           favAnimals={this.props.favAnimals}
         />
-      </main>
-    )
+        </main>
+      )
+    } else {
+      return(
+        <main>
+          <CountryCardContainer endangeredSpecies={this.props.endangeredSpecies} 
+            countries={this.props.countries}
+            addFav={this.props.addFav} 
+            searchInput={this.props.searchInput} 
+            favAnimals={this.props.favAnimals}
+          />
+          <AnimalCardContainer endangeredSpecies={this.props.endangeredSpecies} 
+            addFav={this.props.addFav} 
+            searchInput={this.props.searchInput} 
+            favAnimals={this.props.favAnimals}
+          />
+        </main>
+      )
+    }
+    
   }
 }
 

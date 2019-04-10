@@ -10,7 +10,8 @@ class App extends Component {
       endangeredSpecies: [],
       countries: [],
       searchInput: '',
-      favAnimals: []
+      favAnimals: [],
+      isFavorite: false
     }
   }
 
@@ -56,16 +57,24 @@ class App extends Component {
     })
   }
 
+  setFavoriteState = (favorited) => {
+    this.setState({
+      isFavorite: favorited
+    })
+  }
   render() {
     console.log(this.state.countries)
     return (
       <div className="App">
-        <Header generateContent={this.generateContent} /> 
+        <Header generateContent={this.generateContent}
+               setFavoriteState={this.setFavoriteState}
+        /> 
         <Globe searchInput={this.state.searchInput} 
             endangeredSpecies={this.state.endangeredSpecies} 
             countries={this.state.countries} 
             addFav={this.addFav}
             favAnimals={this.state.favAnimals}
+            isFavorite={this.state.isFavorite}
         /> 
       </div>
     );
