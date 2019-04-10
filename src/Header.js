@@ -30,7 +30,7 @@ class Header extends Component {
       <header>
         <h1 className="app-title">Kayla's Ark</h1>
         <input type="search" placeholder=" Search Animal or Country..." onChange={this.handleChange} />  
-        <button onClick={this.handleClick}>{showFavBtn}</button>
+        <button className="show-btn" onClick={this.handleClick}>{showFavBtn}</button>
       </header>
     
     )

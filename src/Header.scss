@@ -26,11 +26,18 @@ input {
   -webkit-appearance: none;
   font-size: 1rem;
   height: 28px;
-  width: 60%;
+  width: 50%;
   margin: 10px 0;
 }
 
-button {
+.show-btn {
+  background: #102731;
+  border-style: none;
+  color: #fff;
   height: 28px;
-  width: 60%;
+  width: 50%;
+}
+
+.show-btn:hover {
+  background: #8FA7AD;
 }
