@@ -1,10 +1,10 @@
 .cc-card {
   object-fit: contain;
-  background-color: #102731; 
+  background-color: #102731F2; 
   box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
   justify-content: center;
-  margin: 10px auto;
-  width: 40%;
+  margin: 30px auto;
+  width: 50%;
 }
 
 .cc {
@@ -21,19 +21,19 @@
 .cc-info {
   color: #1A657C;
   font-weight: 400;
-  font-size: 1.2rem;
-}
-a:link {
-  color: #1A657C;
+  font-size: 1rem;
 }
 
 a {
+  color: #1A657C;
+  margin-right: 10px;
   text-decoration: none;
 }
 
-a:visited {
+a:hover {
   color: #FF6232;;
 }
+
 
 
 

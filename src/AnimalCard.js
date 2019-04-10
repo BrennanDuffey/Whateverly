@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './AnimalCard.css';
+import './AnimalCard.scss';
 
 class AnimalCard extends Component {
   constructor(props) {
