@@ -46,4 +46,4 @@ Initial set-up was done paired as a group so everyone was familiar with the init
 
 ## Improvements
 
-
+- https://github.com/BrennanDuffey/whateverly/issues
