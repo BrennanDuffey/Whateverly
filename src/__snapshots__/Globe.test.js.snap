@@ -1,0 +1,134 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Globe Should render correctly with all the information passed 1`] = `
+<main>
+  <CountryCardContainer
+    addFav={[MockFunction]}
+    countries={
+      Array [
+        Object {
+          "conservationGroups": Array [
+            Object {
+              "link": "https://china.wcs.org",
+              "name": "Wildlife Conservation Society China",
+            },
+            Object {
+              "link": "https://savechinastigers.org/",
+              "name": "Save China's Tigers",
+            },
+          ],
+          "name": "China",
+          "population": 1418791076,
+          "topThreats": Array [
+            "Poaching",
+            "Climate Change",
+            "Habitat Loss",
+          ],
+        },
+        Object {
+          "conservationGroups": Array [
+            Object {
+              "link": "https://mongolia.wcs.org/",
+              "name": "Wildlife Conservation Society - Mongolia",
+            },
+            Object {
+              "link": "http://www.wscc.org.mn/",
+              "name": "Wildlife Science and Conservation Center of Mongolia",
+            },
+          ],
+          "name": "Mongolia",
+          "population": 3166244,
+          "topThreats": Array [
+            "Poaching",
+            "Climate Change",
+            "Habitat Loss",
+          ],
+        },
+      ]
+    }
+    endangeredSpecies={
+      Array [
+        Object {
+          "endangeredStatus": "Vulnerable",
+          "genus": "Panthera",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Snow_Leopard_in_Ladakh%28_Photo_by_Tashi_Lonchay%29.jpg",
+          "locations": Array [
+            "China",
+            "Mongolia",
+            "India",
+          ],
+          "name": "Snow Leopard",
+          "population": 6000,
+          "threats": Array [
+            "Poaching",
+            "Climate Change",
+          ],
+        },
+        Object {
+          "endangeredStatus": "Near Threatened",
+          "genus": "Panthera",
+          "image": "https://images.unsplash.com/photo-1517825738774-7de9363ef735?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80",
+          "locations": Array [
+            "Amazonian Brazil",
+            "South America",
+            "Central America",
+            "Mexico",
+          ],
+          "name": "Jaguar",
+          "population": "Unknown",
+          "threats": Array [
+            "Poaching",
+            "Habitat Loss",
+            "Human Intolerance",
+          ],
+        },
+      ]
+    }
+    favAnimals={Array []}
+    searchInput=""
+  />
+  <AnimalCardContainer
+    addFav={[MockFunction]}
+    endangeredSpecies={
+      Array [
+        Object {
+          "endangeredStatus": "Vulnerable",
+          "genus": "Panthera",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Snow_Leopard_in_Ladakh%28_Photo_by_Tashi_Lonchay%29.jpg",
+          "locations": Array [
+            "China",
+            "Mongolia",
+            "India",
+          ],
+          "name": "Snow Leopard",
+          "population": 6000,
+          "threats": Array [
+            "Poaching",
+            "Climate Change",
+          ],
+        },
+        Object {
+          "endangeredStatus": "Near Threatened",
+          "genus": "Panthera",
+          "image": "https://images.unsplash.com/photo-1517825738774-7de9363ef735?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80",
+          "locations": Array [
+            "Amazonian Brazil",
+            "South America",
+            "Central America",
+            "Mexico",
+          ],
+          "name": "Jaguar",
+          "population": "Unknown",
+          "threats": Array [
+            "Poaching",
+            "Habitat Loss",
+            "Human Intolerance",
+          ],
+        },
+      ]
+    }
+    favAnimals={Array []}
+    searchInput=""
+  />
+</main>
+`;

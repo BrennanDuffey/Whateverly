@@ -6,7 +6,6 @@ import FavoriteCardContainer from './FavoriteCardContainer.js';
 class Globe extends Component {
   constructor(props) {
     super(props);
-    this.state = {}
   }
   
   render() {
