@@ -16,7 +16,6 @@ const mockEndangeredSpecies =
 const mockAddFav = jest.fn();
 const mockSearchInput = 'Jaguar';
 const mockFavAnimals = ['Jaguar', 'Narwhal'];
-const mockDefaultProps = props;
 
 describe('AnimalCard', () => {
     let wrapper;
@@ -34,6 +33,6 @@ describe('AnimalCard', () => {
         expect(wrapper).toMatchSnapshot();
     }); 
     it('should have a proper default state', () => {
-        expect(wrapper.state()).toEqual( {isFav: false} )
+        expect(wrapper.state()).toEqual( {isFav: false, name: "Snow Leopard"} )
     });
 });
