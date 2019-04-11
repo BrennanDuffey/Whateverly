@@ -1,12 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import { shallow } from 'enzyme';
+import App from './App.js';
+import Globe from './Globe.js';
+import Header from './Header.js';
 
-it('renders without crashing', () => {
-  // setup 
-  // execution
-  // expectation
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-  ReactDOM.unmountComponentAtNode(div);
+
+describe('App', () => {
+  
+  let wrapper;
+
+  beforeEach(() => {
+    wrapper = shallow( 
+      <App/>
+    );
+  });
+
+  it('Should render correctly with all the information passed', () => {
+      expect(wrapper).toMatchSnapshot();
+  });
+
+  
 });
+

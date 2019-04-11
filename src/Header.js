@@ -29,8 +29,8 @@ class Header extends Component {
     return(
       <header>
         <h1>Kayla's Ark</h1>
-        <input type="search" placeholder=" Search Animal or Country..." onChange={this.handleChange} />  
-        <button onClick={this.handleClick}>{showFavBtn}</button>
+        <input className='search' type="search" placeholder=" Search Animal or Country..." onChange={this.handleChange} />  
+        <button className='show-favorites' onClick={this.handleClick}>{showFavBtn}</button>
       </header>
     
     )
