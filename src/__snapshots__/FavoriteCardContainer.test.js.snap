@@ -2,9 +2,6 @@
 
 exports[`FavoriteCardContainer Should render correctly with all the information passed 1`] = `
 <section>
-  <h2>
-    Favorites
-  </h2>
   <AnimalCard
     addFav={[MockFunction]}
     endangeredStatus="Vulnerable"

@@ -2,7 +2,9 @@
 
 exports[`Header should match the snapshot with all of the data passed in 1`] = `
 <header>
-  <h1>
+  <h1
+    className="app-title"
+  >
     Kayla's Ark
   </h1>
   <input
@@ -12,7 +14,7 @@ exports[`Header should match the snapshot with all of the data passed in 1`] = `
     type="search"
   />
   <button
-    className="show-favorites"
+    className="show-favorites show-btn"
     onClick={[Function]}
   >
     Show Favorites
