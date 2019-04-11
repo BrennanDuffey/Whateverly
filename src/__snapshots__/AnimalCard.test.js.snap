@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AnimalCard should match the snapshot 1`] = `
+<section
+  className="cards"
+>
+  <img
+    src="https://upload.wikimedia.org/wikipedia/commons/d/d7/Snow_Leopard_in_Ladakh%28_Photo_by_Tashi_Lonchay%29.jpg"
+  />
+  <article>
+    <button
+      className=""
+      id="favbtn"
+      onClick={[Function]}
+    >
+      Add to Favorites
+    </button>
+    <h2>
+      Snow Leopard
+    </h2>
+    <p
+      className="animal-info-titles"
+    >
+      Extinction Level: 
+      <span
+        className="animal-info-red"
+      >
+        Vulnerable
+      </span>
+    </p>
+    <p
+      className="animal-info-titles"
+    >
+      Population: 
+      <span
+        className="animal-info-red"
+      >
+        6000
+      </span>
+    </p>
+    <p
+      className="animal-info-titles"
+    >
+      Genus: 
+      <span
+        className="animal-info"
+      >
+        Panthera
+      </span>
+    </p>
+    <p
+      className="animal-info-titles"
+    >
+      Locations: 
+      <span
+        className="animal-info"
+      >
+        China, Mongolia, India
+      </span>
+    </p>
+    <p
+      className="animal-info-titles"
+    >
+      Threats: 
+      <span
+        className="animal-info"
+      >
+        Poaching, Climate Change
+      </span>
+    </p>
+  </article>
+</section>
+`;

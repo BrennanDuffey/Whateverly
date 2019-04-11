@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AnimalCardContainer should match the snapshot 1`] = `
+<section>
+  <AnimalCard
+    addFav={[MockFunction]}
+    endangeredStatus="Vulnerable"
+    favAnimals={Array []}
+    genus="Panthera"
+    image="https://upload.wikimedia.org/wikipedia/commons/d/d7/Snow_Leopard_in_Ladakh%28_Photo_by_Tashi_Lonchay%29.jpg"
+    key="Snow Leopard"
+    locations={
+      Array [
+        "China",
+        "Mongolia",
+        "India",
+      ]
+    }
+    name="Snow Leopard"
+    population={6000}
+    threats={
+      Array [
+        "Poaching",
+        "Climate Change",
+      ]
+    }
+  />
+  <AnimalCard
+    addFav={[MockFunction]}
+    endangeredStatus="Near Threatened"
+    favAnimals={Array []}
+    genus="Panthera"
+    image="https://images.unsplash.com/photo-1517825738774-7de9363ef735?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
+    key="Jaguar"
+    locations={
+      Array [
+        "Amazonian Brazil",
+        "South America",
+        "Central America",
+        "Mexico",
+      ]
+    }
+    name="Jaguar"
+    population="Unknown"
+    threats={
+      Array [
+        "Poaching",
+        "Habitat Loss",
+        "Human Intolerance",
+      ]
+    }
+  />
+</section>
+`;
