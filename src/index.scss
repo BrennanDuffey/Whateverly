@@ -1,16 +1,8 @@
-/* Colors: 
-
-#102731;
-#364C4A;
-#F2EFAE;
-#EAE191;
-#323F5E;
-
-Dark Grey: #4F4F4F;
-Blue saphire: #1A657C;
-Portland Orange: #FF6232;
-Cadet Grey: #8FA7AD; 
-White: #FCFDFF;  */
+@import './normalize.scss';
+@import './App.scss';
+@import './Header.scss';
+@import './CountryCard.scss';
+@import './AnimalCard.scss';
 
 
 * {
@@ -29,7 +21,4 @@ body {
   background-size: cover;
 }
 
-/* code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-} */
+

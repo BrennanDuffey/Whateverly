@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Globe from './Globe.js';
 import Header from './Header.js';
-import './App.css';
+import './App.scss';
 
 class App extends Component {
   constructor() {
