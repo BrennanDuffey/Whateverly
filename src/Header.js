@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Header.css';
+import './Header.scss';
 
 class Header extends Component {
   constructor() {
@@ -28,9 +28,9 @@ class Header extends Component {
 
     return(
       <header>
-        <h1>Kayla's Ark</h1>
+        <h1 className="app-title">Kayla's Ark</h1>
         <input type="search" placeholder=" Search Animal or Country..." onChange={this.handleChange} />  
-        <button onClick={this.handleClick}>{showFavBtn}</button>
+        <button className="show-btn" onClick={this.handleClick}>{showFavBtn}</button>
       </header>
     
     )

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './AnimalCard.css';
+import './AnimalCard.scss';
 
 class AnimalCard extends Component {
   constructor(props) {
@@ -27,7 +27,7 @@ class AnimalCard extends Component {
           this.props.addFav(this.props.name)
           
         }
-         } id='favbtn' className={favClass}>{favbtn}</button>
+          } id='favbtn' className={favClass}>{favbtn}</button>
 
         <h2>{this.props.name}</h2>
         <p className="animal-info-titles">Extinction Level: <span className="animal-info-red">{this.props.endangeredStatus}</span></p>
